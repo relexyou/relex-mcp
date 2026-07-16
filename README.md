@@ -72,20 +72,39 @@ claude mcp add --transport http relex https://relex.you/api/mcp \
 
 After connect, say: **"Set up my practice workflow with Relex."**
 
+## What each product calls this
+
+Same MCP URL; different UI labels:
+
+| Product | Official UI name |
+|---------|------------------|
+| Claude | **Custom connector** |
+| ChatGPT | **App** / custom MCP connector (Developer mode) |
+| Grok.com | **Connector** → Custom |
+| Grok Build | **MCP server** / **plugin** |
+| Gemini CLI | **MCP server** |
+| Gemini Enterprise | **Custom MCP Server** |
+| Cursor / generic | **MCP server** |
+
+Always name it **Relex**, URL `https://relex.you/api/mcp`.
+
 ## Personal vs Team (applies across hosts)
 
-Most AI products mirror the same pattern:
+| Plan type | Who installs | Who signs in |
+|-----------|--------------|--------------|
+| **Personal** | **You** add the connector / app / MCP server | **You** Connect + OAuth |
+| **Team / Business / Enterprise** | **Owner or admin** adds once | **Each member** finds Relex listed and **Connect**s *their* Relex account |
 
-| Plan type | Who installs the connector | Who signs in |
-|-----------|----------------------------|--------------|
-| **Personal** (Pro / Max / Plus / individual) | **You** add the custom connector / MCP server | **You** click Connect and complete OAuth |
-| **Team / Business / Enterprise** | **Owner or admin** adds the connector once for the org | **Each member** opens Settings → Connectors (or Apps), finds Relex already listed, and clicks **Connect** to link *their* Relex account |
+Members on Team plans usually **cannot** add custom entries themselves.
 
-Members on Team plans **cannot** usually add custom connectors themselves.
-If Relex is missing from the list, ask your admin to install it. If it is
-listed but not connected, only you can complete the OAuth step for your account.
+## OAuth (generic MCP)
 
-Full flows: [`docs/install.md`](docs/install.md).
+Hosts that support MCP OAuth: unauthenticated call → `401` +
+`WWW-Authenticate: resource_metadata=…` → browser Google/Apple on relex.you →
+bearer token on later `search`/`execute`. Full walkthrough:
+[`docs/oauth.md`](docs/oauth.md) and https://relex.you/docs/connectors/mcp
+
+Full install flows: [`docs/install.md`](docs/install.md).
 
 ## Layout
 
