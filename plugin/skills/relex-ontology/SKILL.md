@@ -65,7 +65,7 @@ acquisition verb — never fill a gap from model memory:
 | **Grounding** | an issue/claim cites no statute, or cites one with no cached verbatim text | `POST /research/scrape` (see `relex-research`) |
 | **Coverage** | a fact pattern with no enumerated candidate issue at all | steer a re-reason turn: `POST /agent {type:"case_req", …}` naming the un-covered pattern |
 | **Entity** | an actor appears in the timeline/docs but not as a `[PARTY_NAME_n]` node | user finishes pending parties in the browser (deep link) or id-only attach |
-| **Evidence** | a fact asserted with no source document | deep-link the user to upload; or search knowledge via the agent |
+| **Evidence** | a fact asserted with no source document | deep-link the user to upload; or search knowledge via their agent |
 | **Conflict** | `contradicts`/`undercuts` edges nobody resolved | acquire the resolving authority, or escalate to the human with both sides |
 | **Temporal** | timeline holes around dispositive events | ask the user ONE targeted question (question-brake, `relex-counsel`) |
 | **Currency** | statute possibly amended / transposition pending | re-scrape the latest version before relying on it |

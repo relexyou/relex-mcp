@@ -65,7 +65,7 @@ research, re-reasoning) runs **through it**, in a steering session
 directives, read its `steering` block back (it teaches you the platform),
 review adversarially, conclude. Your steering turns run on a behind-the-scenes
 branch; only the concluded distillation lands on the main case thread, where
-everyone sees it attributed to your user "via the agent".
+everyone sees it attributed to your user "via their agent".
 
 ## Platform questions: support, not admin
 

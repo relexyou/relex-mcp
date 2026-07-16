@@ -22,7 +22,7 @@ Your first `POST /agent {type:"case_req", caseId, payload:{prompt}}` on an
 active case auto-opens a **steering branch** — a private side-thread of the
 case timeline. Every steering turn lands there, not on the main conversation.
 The humans on the case see a collapsed "the agent steering session" marker with
-your user's role and "via the agent" attribution; they can expand it read-only.
+your user's role and "via their agent" attribution; they can expand it read-only.
 Work openly — it is all auditable — but nothing you do exists on the main
 thread until you conclude.
 
@@ -78,7 +78,7 @@ execute POST /cases/{caseId}/steering/conclude   body: {} (or {branchId})
 The platform distills the whole session into ONE high-fidelity conclusion
 (decisions with grounds and verbatim citations, confirmed facts, rejected
 alternatives, deliverables, open action items) and appends it to the main
-thread, attributed to your user "via the agent". Future agent turns read it
+thread, attributed to your user "via their agent". Future agent turns read it
 automatically. **Never abandon a session at a decision point** — an idle
 session is force-concluded after 24h, but that is the backstop, not the plan.
 
