@@ -1,0 +1,15 @@
+{
+  "name": "relex-legal",
+  "displayName": "Relex Legal (MCP)",
+  "version": "0.1.0",
+  "description": "Drive your Relex legal cases from any MCP-compatible AI agent — read, reason, draft, and record over a PII-safe API. Clients' names and IDs are sealed with a key only the user holds; the agent only ever works with de-identified labels.",
+  "author": { "name": "Relex" },
+  "homepage": "https://relex.you/docs/mcp",
+  "repository": "https://github.com/relexyou/relex-mcp",
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["legal", "case-management", "pii", "mcp", "ontology", "end-to-end", "sealed"],
+  "mcp": {
+    "url": "https://relex.you/api/mcp",
+    "transport": "http"
+  }
+}

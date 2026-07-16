@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "relex": {
+      "type": "http",
+      "url": "https://relex.you/api/mcp"
+    }
+  }
+}
